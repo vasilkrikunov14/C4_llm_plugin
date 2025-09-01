@@ -17,7 +17,7 @@ All code stays local. Only minimal metadata is shared.
 
 ### 🔹 Context-Level Architecture (C4)
 
-![Context Level Diagram](./figures/Context_lvl.svg)
+![Context Level Diagram](./figures/Context_lvl.pdf)
 
 > Developers interact with the plugin, which securely interfaces with internal LLMs and retrieval modules.
 
@@ -25,7 +25,7 @@ All code stays local. Only minimal metadata is shared.
 
 ### 🔹 Container-Level Architecture (C4)
 
-![Container Level Diagram](./figures/Container_lvl.svg)
+![Container Level Diagram](./figures/Container_lvl.pdf)
 
 > Each container is modular and easily swappable: VSCode/JetBrains plugin, Admin UI, Ollama-based LLM backend, logging DB, and more.
 
