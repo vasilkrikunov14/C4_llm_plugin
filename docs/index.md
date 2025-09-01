@@ -5,7 +5,6 @@
 ---
 
 ## 📦 System Overview
-
 Our system comprises:
 
 * 🌐 IDE plugin (JetBrains / VSCode)
