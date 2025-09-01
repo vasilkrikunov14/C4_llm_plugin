@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>index</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<h1 id="hammer_and_wrench-architecture-and-local-code-retrieval">🛠️
+Architecture and Local Code Retrieval</h1>
+<blockquote>
+<p>🔐 <em>An on-premise, privacy-preserving architecture for
+context-aware LLM-powered code assistance.</em></p>
+</blockquote>
+<hr />
+<h2 id="package-system-overview">📦 System Overview</h2>
+<p>Our system comprises:</p>
+<ul>
+<li>🌐 IDE plugin (JetBrains / VSCode)</li>
+<li>🧠 On-premise LLM backend</li>
+<li>🔍 Local Personal CodeRAG module</li>
+<li>🩵 Logging &amp; audit service</li>
+</ul>
+<p>All code stays local. Only minimal metadata is shared.</p>
+<h3 id="small_blue_diamond-context-level-architecture-c4">🔹
+Context-Level Architecture (C4)</h3>
+<p><embed src="../figures/Context_lvl.pdf" /></p>
+<blockquote>
+<p>Developers interact with the plugin, which securely interfaces with
+internal LLMs and retrieval modules.</p>
+</blockquote>
+<hr />
+<h3 id="small_blue_diamond-container-level-architecture-c4">🔹
+Container-Level Architecture (C4)</h3>
+<p><embed src="../figures/Container_lvl.pdf" /></p>
+<blockquote>
+<p>Each container is modular and easily swappable: VSCode/JetBrains
+plugin, Admin UI, Ollama-based LLM backend, logging DB, and more.</p>
+</blockquote>
+<hr />
+<h2 id="mag-personal-coderag-local-retrieval-engine">🔍 Personal
+CodeRAG: Local Retrieval Engine</h2>
+<p>This client-side component ensures:</p>
+<ul>
+<li><strong>Full code privacy</strong></li>
+<li><strong>Fast semantic retrieval</strong></li>
+<li><strong>Rich context for LLM prompting</strong></li>
+</ul>
+<h3 id="brain-embedding-pipeline">🧠 Embedding Pipeline</h3>
+<ul>
+<li><code>BERT (fine-tuned)</code> — encodes both queries and code
+snippets</li>
+<li><code>FAISS</code> — performs similarity search using
+embeddings</li>
+<li><code>GGUF</code> — compresses the model under 2GB</li>
+<li><code>Ollama</code> — lightweight inference server</li>
+</ul>
+<h3 id="gear-local-workflow">⚙️ Local Workflow</h3>
+<pre><code>1. Developer writes a prompt in IDE
+2. CodeRAG embeds the query and searches local indexed code
+3. Top-K relevant snippets are returned
+4. Context is passed to LLM (on-prem/cloud-hosted) for generation</code></pre>
+<h3 id="sparkles-key-benefits">✨ Key Benefits</h3>
+<ul>
+<li>🔒 No code leaves the developer’s machine</li>
+<li>🧹 Plug-and-play for different IDEs or LLM backends</li>
+<li>💻 Works on low-resource environments (&lt;2GB RAM)</li>
+<li>⚙️ Fully modular and extensible</li>
+</ul>
+<hr />
+<h2 id="gear-technologies-used">⚙️ Technologies Used</h2>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Tool/Framework</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IDE Plugin</td>
+<td>JetBrains / VSCode</td>
+</tr>
+<tr>
+<td>Retrieval Index</td>
+<td>FAISS</td>
+</tr>
+<tr>
+<td>Embeddings</td>
+<td>BERT (Code-tuned)</td>
+</tr>
+<tr>
+<td>Model format</td>
+<td>GGUF</td>
+</tr>
+<tr>
+<td>Orchestration</td>
+<td>Ollama</td>
+</tr>
+<tr>
+<td>Hosting (optional)</td>
+<td>Docker, Kubernetes, etc.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="brain-learn-more">🧠 Learn More</h2>
+<ul>
+<li><a href="https://c4model.com/">C4 Model</a></li>
+<li><a href="https://github.com/ggerganov/ggml">GGUF Format</a></li>
+<li><a href="https://ollama.com/">Ollama</a></li>
+<li><a href="https://github.com/facebookresearch/faiss">FAISS</a></li>
+</ul>
+</body>
+</html>
